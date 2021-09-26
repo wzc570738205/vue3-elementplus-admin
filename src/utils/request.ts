@@ -3,7 +3,7 @@
  * @Author: wangzhichiao<https://github.com/wzc570738205>
  * @Date: 2021-09-26 15:42:23
  * @LastEditors: wangzhichiao<https://github.com/wzc570738205>
- * @LastEditTime: 2021-09-26 18:23:48
+ * @LastEditTime: 2021-09-26 20:30:25
  */
 /*
  * @Author: wangzhichiao<https://github.com/wzc570738205>
@@ -69,7 +69,7 @@ var toHideLoading = _.debounce(() => {
 const service = axios.create({
   // baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
   // withCredentials: true, // send cookies when cross-domain requests
-  timeout: 600000 // request timeout
+  timeout: 60 // request timeout
 })
 
 // request interceptor

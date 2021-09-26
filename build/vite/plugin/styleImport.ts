@@ -1,22 +1,29 @@
+/*
+ * @FileDescription:
+ * @Author: wangzhichiao<https://github.com/wzc570738205>
+ * @Date: 2021-09-26 20:07:39
+ * @LastEditors: wangzhichiao<https://github.com/wzc570738205>
+ * @LastEditTime: 2021-09-26 20:26:49
+ */
 /**
  *  Introduces component library styles on demand.
  * https://github.com/anncwb/vite-plugin-style-import
  */
 
-import styleImport from 'vite-plugin-style-import';
+import styleImport from 'vite-plugin-style-import'
 
 export function configStyleImportPlugin(isBuild: boolean) {
-  if (!isBuild) return [];
+  if (!isBuild) return []
   const styleImportPlugin = styleImport({
     libs: [
       {
         libraryName: 'ant-design-vue',
         esModule: true,
         resolveStyle: (name) => {
-          return `ant-design-vue/es/${name}/style/index`;
-        },
-      },
-    ],
-  });
-  return styleImportPlugin;
+          return `ant-design-vue/es/${name}/style/index`
+        }
+      }
+    ]
+  })
+  return styleImportPlugin
 }
